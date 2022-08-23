@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1,2,3,4,5">
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv_row_name"
+            android:layout_column="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/normal_cell"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_down_cell"
+            android:layout_column="2"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/normal_cell"
+            android:textAlignment="center"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_up_cell"
+            android:layout_column="3"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/normal_cell"
+            android:textAlignment="center"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_up_down_cell"
+            android:layout_column="4"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/normal_cell"
+            android:textAlignment="center"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_announcement_cell"
+            android:layout_column="5"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/normal_cell"
+            android:textAlignment="center"
+            android:padding="10dp"
+            />
+    </TableRow>
+
+</TableLayout>
