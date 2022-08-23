@@ -10,7 +10,9 @@ class Die(var mId: Int)
 
     //Methods
     fun throwDie(): Unit{
-        mNumber = Random.nextInt(1, 6)
+        if(!mLocked) {
+            mNumber = Random.nextInt(1, 6)
+        }
     }
     fun lockDie(): Unit{
         mLocked = true

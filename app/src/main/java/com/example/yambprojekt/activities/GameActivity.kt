@@ -2,6 +2,7 @@ package com.example.yambprojekt.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,8 @@ import com.example.yambprojekt.adapters.GameRowItem
 import com.example.yambprojekt.adapters.OnCellClickListener
 import com.example.yambprojekt.data.Die
 import com.example.yambprojekt.data.TableCell
+import com.example.yambprojekt.data.getDieResource
+import com.example.yambprojekt.databinding.ActivityGameRecyclerViewBinding
 
 val mFirstCellList = List(17){TableCell()}
 val mSecondCellList = List(17){TableCell()}
@@ -18,28 +21,46 @@ val mThirdCellList = List(17){TableCell()}
 val mFourthCellList = List(17){TableCell()}
 val mFifthCellList = List(17){TableCell()}
 val list = ArrayList<GameRowItem>()
+val mDieList = List(6){Die(1); Die(2); Die(3); Die(4); Die(5);
+        Die(6)}
+
 
 
 class GameActivity : AppCompatActivity(), OnCellClickListener {
-    var mGameRowList = generateRows()
+    private var mGameRowList = generateRows()
+    private lateinit var dice: List<ImageView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game_recycler_view)
+        val binding = ActivityGameRecyclerViewBinding.inflate(layoutInflater).also{
+            setContentView(it.root)
+            it.btnRoll.setOnClickListener { rollDice() }
+            dice = listOf(
+                it.ivDieOne, it.ivDieTwo, it.ivDieThree, it.ivDieFour, it.ivDieFive, it.ivDieSix
+            )
+        }
 
-        val mRecyclerView = findViewById<RecyclerView>(R.id.rv_main_table)
-        val mDieOne = Die(1)
-        val mDieTwo = Die(2)
-        val mDieThree = Die(3)
-        val mDieFour = Die(4)
-        val mDieFive = Die(5)
-        val mDieSix = Die(6)
+        binding.btnRoll.setOnClickListener{rollDice()}
+        binding.rvMainTable
+        binding.rvMainTable.adapter = GameAdapter(mGameRowList, this)
+        binding.rvMainTable.layoutManager = LinearLayoutManager(this)
+        binding.rvMainTable.hasFixedSize()
 
+    }
 
-        mRecyclerView.adapter = GameAdapter(mGameRowList, this)
-        mRecyclerView.layoutManager = LinearLayoutManager(this)
-        mRecyclerView.hasFixedSize()
+    private fun rollDice(){
+        for(die in mDieList){
+            if(!die.mLocked){
+                die.throwDie()
+                showResult(die)
+            }
+        }
+    }
 
+    private fun showResult(die: Die) {
+        mDieList.forEachIndexed { index, die ->
+            dice[index].setImageResource(getDieResource(die.mNumber))
+        }
     }
 
     /*private fun enterCellInfo(rowNumber: Int, cellNumber: Int, cellText: String){
