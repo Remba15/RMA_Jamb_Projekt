@@ -19,7 +19,7 @@ fun getDieResource(number: Int): Int {
         4 -> R.drawable.die_face_4
         5 -> R.drawable.die_face_5
         6 -> R.drawable.die_face_6
-        else -> R.drawable.red_cell
+        else -> R.drawable.die_face_blank
     }
 }
 
@@ -31,7 +31,7 @@ fun getLockedDieResource(number: Int): Int {
         4 -> R.drawable.die_face_locked_4
         5 -> R.drawable.die_face_locked_5
         6 -> R.drawable.die_face_locked_6
-        else -> R.drawable.red_cell
+        else -> R.drawable.die_face_blank
     }
 }
 
