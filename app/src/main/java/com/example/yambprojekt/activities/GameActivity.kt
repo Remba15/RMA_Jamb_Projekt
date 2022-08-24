@@ -2,10 +2,8 @@ package com.example.yambprojekt.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.yambprojekt.R
 import com.example.yambprojekt.adapters.GameAdapter
 import com.example.yambprojekt.adapters.GameRowItem
@@ -13,6 +11,7 @@ import com.example.yambprojekt.adapters.OnCellClickListener
 import com.example.yambprojekt.data.Die
 import com.example.yambprojekt.data.TableCell
 import com.example.yambprojekt.data.getDieResource
+import com.example.yambprojekt.data.getLockedDieResource
 import com.example.yambprojekt.databinding.ActivityGameRecyclerViewBinding
 
 val mFirstCellList = List(17){TableCell()}
@@ -38,29 +37,55 @@ class GameActivity : AppCompatActivity(), OnCellClickListener {
             dice = listOf(
                 it.ivDieOne, it.ivDieTwo, it.ivDieThree, it.ivDieFour, it.ivDieFive, it.ivDieSix
             )
+            it.ivDieOne.setOnClickListener{lockUnlockDie(mDieList[0])}
+            it.ivDieTwo.setOnClickListener{lockUnlockDie(mDieList[1])}
+            it.ivDieThree.setOnClickListener{lockUnlockDie(mDieList[2])}
+            it.ivDieFour.setOnClickListener{lockUnlockDie(mDieList[3])}
+            it.ivDieFive.setOnClickListener{lockUnlockDie(mDieList[4])}
+            it.ivDieSix.setOnClickListener{lockUnlockDie(mDieList[5])}
         }
 
-        binding.btnRoll.setOnClickListener{rollDice()}
+
         binding.rvMainTable
         binding.rvMainTable.adapter = GameAdapter(mGameRowList, this)
         binding.rvMainTable.layoutManager = LinearLayoutManager(this)
         binding.rvMainTable.hasFixedSize()
 
+        /*binding.ivDieOne.setOnClickListener{lockUnlockDie(mDieList[0])}
+        binding.ivDieTwo.setOnClickListener{lockUnlockDie(mDieList[1])}
+        binding.ivDieThree.setOnClickListener{lockUnlockDie(mDieList[2])}
+        binding.ivDieFour.setOnClickListener{lockUnlockDie(mDieList[3])}
+        binding.ivDieFive.setOnClickListener{lockUnlockDie(mDieList[4])}
+        binding.ivDieSix.setOnClickListener{lockUnlockDie(mDieList[5])}*/
+
     }
 
     private fun rollDice(){
         for(die in mDieList){
-            if(!die.mLocked){
-                die.throwDie()
-                showResult(die)
-            }
+            die.throwDie()
+            showResult()
         }
     }
 
-    private fun showResult(die: Die) {
+    private fun showResult() {
         mDieList.forEachIndexed { index, die ->
             dice[index].setImageResource(getDieResource(die.mNumber))
         }
+    }
+
+    private fun lockUnlockDie(die: Die){
+        if(!die.mLocked){
+            die.lockDie()
+            dice[die.mNumber-1].setImageResource(getLockedDieResource(die.mNumber))
+        }
+        if(die.mLocked){
+            die.unlockDie()
+            dice[die.mNumber-1].setImageResource(getDieResource(die.mNumber))
+        }
+    }
+
+    private fun updateDieStatus(die: Die){
+
     }
 
     /*private fun enterCellInfo(rowNumber: Int, cellNumber: Int, cellText: String){

@@ -23,6 +23,18 @@ fun getDieResource(number: Int): Int {
     }
 }
 
+fun getLockedDieResource(number: Int): Int {
+    return when(number){
+        1 -> R.drawable.die_face_locked_1
+        2 -> R.drawable.die_face_locked_2
+        3 -> R.drawable.die_face_locked_3
+        4 -> R.drawable.die_face_locked_4
+        5 -> R.drawable.die_face_locked_5
+        6 -> R.drawable.die_face_locked_6
+        else -> R.drawable.red_cell
+    }
+}
+
 fun sortDieList(): List<Die> {
     return listOfDies.sortedBy { it.mNumber }
 }
