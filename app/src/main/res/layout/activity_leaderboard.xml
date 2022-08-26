@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background">
+
+    <TableLayout
+        android:id="@+id/tl_leaderboard_columns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2,3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/texture_blue"
+                android:text="@string/name"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_column="2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/texture_blue"
+                android:text="@string/score"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                />
+            <TextView
+                android:layout_column="3"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/texture_blue"
+                android:text="@string/date"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_leaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/tl_leaderboard_columns"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/rv_leaderboard_layout"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

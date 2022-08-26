@@ -7,4 +7,8 @@
     <string name="arrow_up_down">↑↓</string>
     <string name="announcement">A</string>
     <string name="sum">∑</string>
+    <string name="name">Name</string>
+    <string name="score">Score</string>
+    <string name="date">Date</string>
+    <string name="Return">Return</string>
 </resources>

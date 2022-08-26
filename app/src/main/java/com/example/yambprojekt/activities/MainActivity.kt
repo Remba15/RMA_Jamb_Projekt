@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.yambprojekt.R
+import com.example.yambprojekt.databinding.ActivityLeaderboardBinding
 import com.example.yambprojekt.databinding.ActivityMainBinding
 
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
             it.btnNewGame.setOnClickListener { openNewGame() }
             it.btnExit.setOnClickListener { finishAffinity() }
             it.btnInfo.setOnClickListener {openInfo() }
+            it.btnLeaderboard.setOnClickListener { openLeaderboard() }
         }
 
 
@@ -33,7 +35,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openLeaderboard(){
-
+        val newLeaderboardIntent: Intent = Intent(this, LeaderboardActivity::class.java)
+        startActivity(newLeaderboardIntent)
     }
 
 }
