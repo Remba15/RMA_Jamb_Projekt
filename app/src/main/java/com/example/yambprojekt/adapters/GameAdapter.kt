@@ -49,8 +49,12 @@ class GameAdapter(
 
         override fun onClick(p0: View?) {
             val position = bindingAdapterPosition
-            if(position != RecyclerView.NO_POSITION)
-            listener.onCellClick(position)
+            if(position != RecyclerView.NO_POSITION) {
+                listener.onSecondCellClick(position)
+                listener.onThirdCellClick(position)
+                listener.onFourthCellClick(position)
+                listener.onFifthCellClick(position)
+            }
         }
     }
 

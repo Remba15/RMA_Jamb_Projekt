@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.yambprojekt.R
+import com.example.yambprojekt.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,25 +13,27 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val btnNewGame = findViewById<Button>(R.id.btn_newGame)
-        btnNewGame.setOnClickListener {
-            openNewGame()
+        val binding = ActivityMainBinding.inflate(layoutInflater).also {
+            setContentView(it.root)
+            it.btnNewGame.setOnClickListener { openNewGame() }
+            it.btnExit.setOnClickListener { finishAffinity() }
+            it.btnInfo.setOnClickListener {openInfo() }
         }
 
-        val btnExit = findViewById<Button>(R.id.btn_exit)
-        btnExit.setOnClickListener{
-            finishAffinity()
-        }
 
     }
-
 
     private fun openNewGame() {
         val newGameIntent: Intent = Intent(this, GameActivity::class.java)
         startActivity(newGameIntent)
     }
 
+    private fun openInfo(){
+
+    }
+
+    private fun openLeaderboard(){
+
+    }
 
 }
