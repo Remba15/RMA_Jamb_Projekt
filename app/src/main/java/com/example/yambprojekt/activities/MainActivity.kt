@@ -3,9 +3,9 @@ package com.example.yambprojekt.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.yambprojekt.R
-import com.example.yambprojekt.databinding.ActivityLeaderboardBinding
 import com.example.yambprojekt.databinding.ActivityMainBinding
 
 
@@ -22,21 +22,21 @@ class MainActivity : AppCompatActivity() {
             it.btnLeaderboard.setOnClickListener { openLeaderboard() }
         }
 
-
     }
 
     private fun openNewGame() {
-        val newGameIntent: Intent = Intent(this, GameActivity::class.java)
-        startActivity(newGameIntent)
+        val mNewGameIntent: Intent = Intent(this, GameActivity::class.java)
+        startActivity(mNewGameIntent)
     }
 
     private fun openInfo(){
-
+        var dialog = InfoDialogFragment()
+        dialog.show(supportFragmentManager, "InfoDialog")
     }
 
     private fun openLeaderboard(){
-        val newLeaderboardIntent: Intent = Intent(this, LeaderboardActivity::class.java)
-        startActivity(newLeaderboardIntent)
+        val mNewLeaderboardIntent: Intent = Intent(this, LeaderboardActivity::class.java)
+        startActivity(mNewLeaderboardIntent)
     }
 
 }

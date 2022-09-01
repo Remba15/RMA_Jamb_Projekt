@@ -11,4 +11,7 @@
     <string name="score">Score</string>
     <string name="date">Date</string>
     <string name="Return">Return</string>
+    <string name="InfoFragment">Information about game</string>
+
+
 </resources>
