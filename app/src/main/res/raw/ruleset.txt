@@ -1,0 +1,68 @@
+Igru igraju dva ili više igrača. Igra se sa pet kockica
+(ukoliko igrate sa šest kockica, prilikom upisa rezultata, računaju se vrijednosti pet kockica).
+========================================
+				REDOVI
+========================================
+1 - 6: U redove označene brojevima 1-6 upisuje se rezultat tri bacanja i to samo zbroj kockica koje nose taj broj, poštujući pravila redoslijeda upisivanja kolona.
+PRIMJER: nakon tri bacanja ostvarili ste 5;5;5;4;2, te u red označen sa 5 upisujete 15, poštujući pravila redoslijeda upisivanja kolona.
+
+Posebnu pozornost obratite na red označen s brojem 1.
+Kad u nekoj koloni ispunite sve redove, zbrojite postignute iznose. Ukoliko vam zbroj iznosi 60 ili više,
+tada automatski pribrojite i nagradni bonus koji iznosi 30 bodova (za dobivanje nagradnog bonusa možete dogovoriti drugi potrebni zbroj – npr.63).
+
+PRIMJER: 3+6+9+12+15+18=63, s obzirom da je zbroj jednak ili veći od dogovorenog pribrajate nagradni bonus, te u red ZBROJ upisujete 93.
+
+MAX - MIN: U redove označene MAX i MIN treba upisati što je moguće veći, odnosno manji ukupni zbroj pet kockica nakon tri bacanja, poštujući pravila redoslijeda upisivanja kolona.
+
+PRIMJER: 6;6;5;5;4 za maksimum treba upisati 26, ili 1;1;2;2;3 za minimum treba upisati 9.
+Kad se u nekoj koloni ispune redovi MAX i MIN, minimum se oduzima od maksimuma, u gore navedenom primjeru 26-9=17,
+te se dobivena razlika množi s postignutim brojem u redu 1 (a) u toj koloni.
+
+PRIMJER: Ukoliko ste u koloni, u redu 1, upisali 3, tada vam umnožak iznosi 17x3=51, te tu vrijednost upisujete u red RAZLIKA MAX i MIN x a).
+
+TRIS: U redove označene TRIS zbroj + 10 treba upisati zbroj pet kockica nakon tri bacanja (ili ranije) uvećan za 10,
+na način da od pet kockica barem tri imaju istu vrijednost, poštujući pravila redosljeda upisivanja kolona.
+
+PRIMJER: 4;4;4;5;6 za TRIS treba upisati 24+10=34
+
+SKALA: U redove označene SKALA upisujete 30 bodova za malu skalu (1;2;3;4;5), te 40 bodova za veliku skalu (2;3;4;5;6), dobivenu nakon tri bacanja (ili manje),
+poštujući pravila redosljeda upisivanja kolona. Dakle, u ovaj red upisuju se bodovi koje donosi dobivena skala, a ne zbroj kockica dobivene skale.
+
+FULL: U redove označene FULL zbroj + 30 upisujete zbroj pet kockica nakon tri bacanja (ili ranije) uvećane za 30,
+na način da od pet kockica tri imaju istu vrijednost, te preostale dvije također imaju istu vrijednost, poštujući pravila redoslijeda upisivanja kolona.
+
+PRIMJER: 3;3;3;5;5 za FULL treba upisati 19+30=49
+
+POKER: U redove označene POKER zbroj + 40 upisujete zbroj pet kockica nakon tri bacanja (ili ranije) uvećane za 40,
+na način da od pet kockica barem četiri imaju istu vrijednost, poštujući pravila redoslijeda upisivanja kolona.
+
+PRIMJER: 5;5;5;5;6 za POKER treba upisati 26+40=66
+
+YAMB: U redove označene YAMB zbroj + 50 upisujete zbroj pet kockica nakon tri bacanja (ili ranije) uvećane za 50,
+na način da od pet kockica sve imaju istu vrijednost, poštujući pravila redoslijeda upisivanja kolona.
+
+PRIMJER: 4;4;4;4;4 za YAMB treba upisati 20+50=70
+
+ZBROJ: U redove ZBROJ upisujete zbroj redova TRIS, SKALA, FULL, POKER i YAMB postignutih u toj koloni.
+========================================
+				STUPCI
+========================================
+STRELICA DOLJE: Ova kolona obavezatno se popunjava prema dolje. Dakle, prvo popunite red 1, zatim red 2, te tim redom sve do reda YAMB.
+STRELICA GORE: Ova kolona obvezatno se popunjava prema gore. Dakle, prvo popunite red YAMB, zatim red POKER, te tim redom sve do reda 1.
+STRELICA DOLJE-GORE: Ova kolona popunjava se proizvoljno. Dakle, rezultat bilo kojeg kruga možete upisati u bilo koji red ove kolone.
+NAJAVA (N): Gdje ćete upisati rezultat pojedinog kruga bacanja, odlučujete nakon završenog kruga (vaša tri bacanja ili ranije, ako ste postigli što ste željeli).
+Međutim, da biste upisali rezultat u kolonu NAJAVA, potrebno je da nakon prvog bacanja u tom krugu najavite svojim protivnicima da ćete rezultat upisati u kolonu NAJAVA,
+te Vam preostaju još dva bacanja da izvršite Vaš naum.
+
+PRIMJER: Nakon prvog bacanja ostvarili ste 2;3;4;5;5 te najavljujete (naglas) skalu,
+pošto postoji vjerojatnost da u slijedeća dva bacanja ostvarite bilo veliku,
+bilo malu skalu bacajući jednu kockicu (peticu). Ako uspijete ostvariti najavljenu kombinaciju, upisujete dobiveni rezultat u kolonu NAJAVA u red SKALA,
+na način da ukoliko ste ostvarili malu skalu upisujete 35, a ukoliko ste ostvarili veliku skalu upisujete 45. Ukoliko niste uspjeli u svojoj nakani,
+u koloni N u redu SKALA upisujete X ili 0, ovisno o načinu upisivanja.
+========================================
+			  REZULTATI
+========================================
+Rezultat je ukupan zbroj koji je pojedini igrač ostvario na kraju igre, a dobiva se zbrojem zbrojeva rezultata iz redova 1-6 + eventualno ostvareni bonus,
+razlike MAX i MIN pomnožene s vrijednošću reda 1 i zbroja TRIS-a, SKAL-e, FULL-a, POKER-a i YAMB-a. Pobjednik je igrač s najvećim rezultatom.
+
+IZVOR: http://www.pjesmicezadjecu.com/drustvene-igre-pravila-igre/yumb-jamb.html#ixzz7dipeWsfn
