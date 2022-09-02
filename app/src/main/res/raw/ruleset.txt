@@ -66,3 +66,5 @@ Rezultat je ukupan zbroj koji je pojedini igrač ostvario na kraju igre, a dobiv
 razlike MAX i MIN pomnožene s vrijednošću reda 1 i zbroja TRIS-a, SKAL-e, FULL-a, POKER-a i YAMB-a. Pobjednik je igrač s najvećim rezultatom.
 
 IZVOR: http://www.pjesmicezadjecu.com/drustvene-igre-pravila-igre/yumb-jamb.html#ixzz7dipeWsfn
+
+Aplikacija izrađena kao studentski projekt za kolegij Razvoj Mobilnih Aplikacija na Osječkom Fakultetu Elektrotehnike, Računarstva i Informacijskih Tehnologija Osijek.

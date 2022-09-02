@@ -1,17 +1,24 @@
 <resources>
     <string name="app_name">Yamb Projekt</string>
-    <string name="roll">Roll dice!</string>
+    <string name="game_title">Yamb! Za ekipu</string>
+    <string name="new_game">Nova igra</string>
+    <string name="info">Informacije</string>
+    <string name="leaderboard">Tablica rezultata</string>
+    <string name="exit">Izlaz</string>
+    <string name="roll">Baci kockice!</string>
     <string name="yamb">Listić</string>
     <string name="arrow_down">↓</string>
     <string name="arrow_up">↑</string>
     <string name="arrow_up_down">↑↓</string>
-    <string name="announcement">A</string>
+    <string name="announcement">N</string>
     <string name="sum">∑</string>
-    <string name="name">Name</string>
-    <string name="score">Score</string>
-    <string name="date">Date</string>
-    <string name="Return">Return</string>
-    <string name="InfoFragment">Information about game</string>
+    <string name="name">Ime</string>
+    <string name="score">Rezultat</string>
+    <string name="date">Datum</string>
+    <string name="Return">Nazad</string>
+    <string name="InfoFragment">Pravila igre</string>
+    <string name="addLeaderboardItem">Dodaj rezultat</string>
+    <string name="remove">Ukloni</string>
 
 
 </resources>

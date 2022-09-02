@@ -10,7 +10,12 @@ class LeaderboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityLeaderboardBinding.inflate(layoutInflater).also {
             setContentView(it.root)
+            it.btnAddLbItem.setOnClickListener { addLeaderboardItem() }
 
         }
+    }
+
+    private fun addLeaderboardItem() {
+        TODO("Not yet implemented")
     }
 }
