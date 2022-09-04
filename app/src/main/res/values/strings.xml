@@ -19,6 +19,7 @@
     <string name="InfoFragment">Pravila igre</string>
     <string name="addLeaderboardItem">Dodaj rezultat</string>
     <string name="remove">Ukloni</string>
-
+    <string name="removeAll">Ukloni Sve</string>
+    <string name="save">Spremi</string>
 
 </resources>

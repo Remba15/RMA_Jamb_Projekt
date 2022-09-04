@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openNewGame() {
-        val mNewGameIntent: Intent = Intent(this, GameActivity::class.java)
+        val mNewGameIntent = Intent(this, GameActivity::class.java)
         startActivity(mNewGameIntent)
     }
 
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openLeaderboard(){
-        val mNewLeaderboardIntent: Intent = Intent(this, LeaderboardActivity::class.java)
+        val mNewLeaderboardIntent = Intent(this, LeaderboardActivity::class.java)
         startActivity(mNewLeaderboardIntent)
     }
 

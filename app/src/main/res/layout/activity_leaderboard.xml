@@ -52,11 +52,6 @@
                 android:textColor="@color/white"
                 android:padding="10dp"
                 />
-            <TextView
-                android:layout_column="4"
-                android:layout_width="0dp"
-                android:layout_height="35dp"
-                android:padding="10dp"/>
         </TableRow>
     </TableLayout>
 
@@ -64,27 +59,104 @@
         android:id="@+id/rv_leaderboard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tl_leaderboard_columns"
+        app:layout_constraintBottom_toTopOf="@+id/insert_result"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="300dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:clipToPadding="false"
-        app:layout_constraintTop_toBottomOf="@id/tl_leaderboard_columns"
         android:scrollbars="vertical"
         tools:listitem="@layout/rv_leaderboard_layout"
         />
 
-    <Button
-        android:id="@+id/btn_add_lb_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rv_leaderboard"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="10dp"
-        android:backgroundTint="@color/light_blue"
-        android:text="@string/addLeaderboardItem"
-        android:textAllCaps="false"
-        />
+   <LinearLayout
+       android:id="@+id/insert_result"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@id/rv_leaderboard"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:orientation="vertical">
+       <EditText
+           android:id="@+id/et_name"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp"
+           android:backgroundTint="@color/white"
+           android:textColorHint="@color/white"
+           android:textColor="@color/white"
+           android:hint="@string/name"
+           />
+
+       <EditText
+           android:id="@+id/et_result"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp"
+           android:backgroundTint="@color/white"
+           android:textColorHint="@color/white"
+           android:textColor="@color/white"
+           android:hint="@string/score"
+           />
+
+       <EditText
+           android:id="@+id/et_date"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp"
+           android:backgroundTint="@color/white"
+           android:textColorHint="@color/white"
+           android:textColor="@color/white"
+           android:hint="@string/date"
+           />
+
+       <Button
+           android:id="@+id/btn_add_lb_item"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp"
+           android:backgroundTint="@color/light_blue"
+           android:text="@string/addLeaderboardItem"
+           android:textAllCaps="false"
+           />
+       <Button
+           android:id="@+id/btn_delete_lb_item"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp"
+           android:backgroundTint="@color/light_blue"
+           android:text="@string/removeAll"
+           android:textAllCaps="false"
+           />
+       <Button
+           android:id="@+id/btn_save_all"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp"
+           android:backgroundTint="@color/light_blue"
+           android:text="@string/save"
+           android:textAllCaps="false"
+           />
+   </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
