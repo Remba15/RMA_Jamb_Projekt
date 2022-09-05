@@ -196,25 +196,25 @@ class GameActivity : AppCompatActivity(), OnCellClickListener{
     //region Za klikanje po čelijama
     override fun onSecondCellClick(position: Int) {
         val currentItem = mGameRowList[position]
-        currentItem.secondCell.mText = "123412"
+        currentItem.secondCell.mText = "16"
         adapter.notifyItemChanged(position)
     }
 
     override fun onThirdCellClick(position: Int) {
         val currentItem = mGameRowList[position]
-        currentItem.thirdCell.mText = "renato2"
+        currentItem.thirdCell.mText = "35"
         adapter.notifyItemChanged(position)
     }
 
     override fun onFourthCellClick(position: Int) {
         val currentItem = mGameRowList[position]
-        mFourthCellList[position].mText = currentItem.fourthCell.mText
+        mFourthCellList[position].mText = "22"
         adapter.notifyItemChanged(position)
     }
 
     override fun onFifthCellClick(position: Int) {
         val currentItem = mGameRowList[position]
-        mFifthCellList[position].mText = currentItem.fifthCell.mText
+        mFifthCellList[position].mText = "5"
         adapter.notifyItemChanged(position)
     }
     //endregion

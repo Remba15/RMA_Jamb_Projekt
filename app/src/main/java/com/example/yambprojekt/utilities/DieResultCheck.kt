@@ -31,3 +31,13 @@ fun checkForStraight(): Boolean{
     if(counter >= 4) return true
     return false
 }
+
+fun checkForTris(): Boolean{
+    if(countOnes() >= 3) return true
+    else if(countTwos() >= 3) return true
+    else if(countThrees() >= 3) return true
+    else if(countFours() >= 3) return true
+    else if(countFives() >= 3) return true
+    else if(countSixes() >= 3) return true
+    return false
+}
